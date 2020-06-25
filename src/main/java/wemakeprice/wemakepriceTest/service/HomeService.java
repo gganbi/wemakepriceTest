@@ -11,6 +11,7 @@ import org.jsoup.Jsoup;
 import java.io.IOException;
 import java.util.ArrayList;
 
+// 2020.06.25  김성민  최초작성
 
 @Service
 @Transactional(readOnly = true)

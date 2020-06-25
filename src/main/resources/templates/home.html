@@ -36,8 +36,8 @@
         $("#val1").val("");
         $("#val2").val("");
         $.ajax({
-            url: "/test",
-            type: "POST",
+            url: "/result",
+            type: "GET",
             data : {
                 url:$("#url").val()
                ,type:$("#type").val()
@@ -55,7 +55,7 @@
 
             },
             error: function(){
-                alert("url과 출력묶음단위는 필수값입니다");
+                alert("url과 출력묶음단위는 필수값이며 \nurl은 주소, http://주소 , https://주소 3가지 형태로 입력 가능합니다.");
             }
         });
     });

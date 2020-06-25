@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 
+// 2020.06.25  김성민  최초작성
 
 @RequiredArgsConstructor
 @Controller
@@ -23,14 +24,14 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    @RequestMapping(value = "/result", method = RequestMethod.GET)
     @ResponseBody
     public Answer outPut(@RequestParam("url")String url, @RequestParam("type")String type
             , @RequestParam("outUnit")int outUnit) throws IOException {
         Answer answerValue = homeService.findItems(url,type,outUnit);
-        System.out.println("text_edit : "+url);
-        System.out.println("text_edit : "+type);
-        System.out.println("text_edit : "+outUnit);
+        System.out.println("url : "+url);
+        System.out.println("type : "+type);
+        System.out.println("outUnit : "+outUnit);
         return answerValue;
     }
 }

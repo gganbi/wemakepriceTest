@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.Embeddable;
 
+// 2020.06.25  김성민  최초작성
+
 @Embeddable
 @Getter
 public class Answer {
